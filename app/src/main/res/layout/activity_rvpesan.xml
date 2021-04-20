@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvpesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:background="@color/whiteBodyColor"
+        app:cardPreventCornerOverlap="true"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/relative1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="100dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imgpesan"
+                android:src="@drawable/li_pesan"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:maxWidth="90dp"
+                android:layout_width="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/tvpesanpengirim"
+                android:textColor="@color/profileEditTextColor"
+                style="@style/viewParent.headerText.homeCardContent"
+                android:layout_below="@id/tvpesansubjek"
+                android:textSize="10sp"
+                android:layout_toRightOf="@+id/imgpesan"
+                android:text="Administrator@sipajar" />
+            <TextView
+                android:id="@+id/tvpesantanggal"
+                android:gravity="end"
+                android:textColor="@color/color_button_default"
+                style="@style/viewParent.headerText.homeCardContent"
+                android:layout_below="@id/tvpesansubjek"
+                android:layout_toRightOf="@+id/tvpesanpengirim"
+                android:layout_alignParentRight="true"
+                android:text="20 Juni 2020 : 19"
+                android:textSize="10sp"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+            <TextView
+                android:id="@+id/tvpesansubjek"
+                android:textColor="@color/profileEditTextColor"
+                android:layout_toRightOf="@+id/imgpesan"
+                android:textSize="18sp"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                style="@style/viewParent.headerText.HomeCardTitle"
+                android:text="Subjek Pesan" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

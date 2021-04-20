@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_laporan"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Kirim Laporan" />
+        <item
+            android:id="@+id/nav_titiksumur"
+            android:icon="@drawable/ic_titik"
+            android:title="Titik Sumur" />
+        <item
+            android:id="@+id/nav_tagihan"
+            android:icon="@drawable/ic_money"
+            android:title="Tagihan" />
+        <item
+            android:id="@+id/nav_pesan"
+            android:icon="@drawable/ic_message"
+            android:title="Pesan" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_user"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_bantu"
+            android:icon="@drawable/ic_info"
+            android:title="Bantuan" />
+    </group>
+
+    <item android:title="Ganti Tema">
+        <menu>
+
+            <item
+                android:id="@+id/nav_dark_mode"
+                android:icon="@android:drawable/ic_menu_day"
+                android:title="Tema Gelap Terang" />
+        </menu>
+    </item>
+
+</menu>

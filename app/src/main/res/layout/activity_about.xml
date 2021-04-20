@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.sukabumikota.sipajar.menu.Tentang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color5">
+
+    <ImageView
+        style="@style/DarkModeHidden"
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/ic_topbk" />
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/loginCard"
+        app:cardCornerRadius="@dimen/loginCardRadius"
+        app:elevation="6dp"
+        android:background="@color/cardColor"
+        android:layout_gravity="center"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="-30dp"
+        android:layout_marginRight="@dimen/loginViewsMargin"
+        android:layout_marginLeft="@dimen/loginViewsMargin"
+        android:layout_marginBottom="@dimen/loginViewsMargin">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/normalPadding"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tentang Aplikasi"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/slide_title"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Versi 0.1"
+                android:textColor="@color/colorAccent"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="109dp"
+                android:src="@drawable/logonpa" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="©2020 - E - NPA"
+                android:textColor="@color/colorAccent"
+                android:layout_marginTop="@dimen/slide_title"
+                android:layout_marginBottom="@dimen/slide_title"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>

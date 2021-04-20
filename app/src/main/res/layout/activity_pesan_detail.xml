@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/grayColor"
+    style="@style/parent.contentLayout"
+    tools:context="com.sukabumikota.sipajar.pesan.PesanDetail">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_gravity="center"
+            android:text="Pesan Masuk"
+            style="@style/viewParent.headerText" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvatas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/whiteBodyColor"
+                android:padding="10dp">
+
+                <TextView
+                    android:textColor="@color/profileEditTextColor"
+                    android:id="@+id/txtsubjek"
+                    style="@style/viewParent.headerText.homeCardContent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Subjek" />
+
+                <TextView
+                    android:textColor="@color/profileEditTextColor"
+                    android:id="@+id/txtpengirim"
+                    android:layout_below="@id/txtsubjek"
+                    style="@style/viewParent.headerText.homeCardContent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Nama Pengirim" />
+
+                <TextView
+                    android:gravity="end"
+                    android:id="@+id/txtpesantanggal"
+                    android:layout_below="@id/txtsubjek"
+                    style="@style/viewParent.headerText.homeCardContent"
+                    android:layout_toRightOf="@id/txtpengirim"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="20 jul 2020"
+                    android:textColor="@color/profileEditTextColor"
+                    />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvisi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/whiteBodyColor"
+                android:minHeight="100dp"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/txtpesan"
+                    style="@style/viewParent.headerText.homeCardContent"
+                    android:layout_below="@id/pesan"
+                    android:textColor="@color/profileEditTextColor"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Lorem Ipsum Dolor sit amet, Lorem Ipsum Dolor sit amet, Lorem Ipsum Dolor sit amet" />
+
+                <TextView
+                    android:id="@+id/pesan"
+                    style="@style/viewParent.headerText.homeCardContent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:text="Pesan Mu"
+                    android:textColor="@color/profileEditTextColor"
+                    />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvbalas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/whiteBodyColor"
+                android:minHeight="100dp"
+                android:padding="10dp">
+                    <TextView
+                    android:id="@+id/balas"
+                    style="@style/viewParent.headerText.homeCardContent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:text="Balas Pesan"
+                    android:textColor="@color/profileEditTextColor"
+                    />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/subjek"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/loginViewsMargin">
+
+                    <EditText
+                        android:id="@+id/editsubjek"
+                        style="@style/modifiedEditText"
+                        android:hint="Subjek"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/isi"
+                    android:layout_below="@+id/subjek"
+                    style="@style/parent">
+
+                    <EditText
+                        android:id="@+id/editisi"
+                        style="@style/modifiedEditText"
+                        android:hint=" Catatan "
+                        android:maxLines="5"
+                        android:singleLine="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:layout_below="@+id/isi"
+                    style="@style/Button"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/btnbalas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Balas Pesan" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardPreventCornerOverlap="true"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_slider_screen2"
+                android:minHeight="100dp"
+                android:padding="10dp">
+
+
+                <TextView
+                    style="@style/viewParent.headerText.homeCardContent"
+                    android:layout_below="@id/catatan"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:text="Diharapkan menggunakan bahasa yang sopan" />
+
+                <TextView
+                    android:id="@+id/catatan"
+                    style="@style/viewParent.headerText.homeCardContent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:text="Catatan" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

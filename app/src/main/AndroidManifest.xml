@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sukabumikota.sipajar">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/applogo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".maps.MapsActivity"></activity>
+        <activity android:name=".lappajak.TanpaMeteran" />
+        <activity android:name=".pesan.KirimPesan" />
+        <activity android:name=".lappajak.DetailLaporan" />
+        <activity android:name=".menu.PilihPesan" />
+        <activity android:name=".menu.DataKosong" />
+        <activity android:name=".objekpajak.OPDetail" />
+        <activity android:name=".pesan.rvpesan" />
+        <activity android:name=".pesan.PesanDetail" />
+        <activity android:name=".pesan.Pesan" />
+        <activity android:name=".menu.PilihOp" />
+        <activity android:name=".menu.PilihOp2" />
+        <activity android:name=".menu.GantiProfile" />
+        <activity android:name=".bantuan.bantuan_item" />
+        <activity android:name=".bantuan.bantuan" />
+        <activity android:name=".lappajak.rvstatuslaporan" />
+        <activity android:name=".lappajak.statuslaporandata" />
+        <activity android:name=".tagihan.rvtagihan" />
+        <activity android:name=".tagihan.TagihanDetail" />
+        <activity android:name=".tagihan.Tagihan" />
+        <activity android:name=".lappajak.DenganDetail" />
+        <activity android:name=".objekpajak.rvobjekpajak" />
+        <activity android:name=".objekpajak.objekpajakdata" />
+        <activity android:name=".lappajak.HanyaFoto" />
+        <activity android:name=".menu.PilihUpload" />
+        <activity android:name=".menu.Profile" />
+        <activity android:name=".menu.Maintance" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".menu.Tentang" />
+        <activity android:name=".list.ListActivity" />
+        <activity android:name=".dialog.InternetDialogActivity" />
+        <activity
+            android:name=".login.RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- android:windowSoftInputMode="adjustPan" -->
+        <activity
+            android:name=".login.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".dialog.SplashActivity" />
+        <activity android:name=".Welcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".utils.GeocodeAddressIntentService"
+            android:exported="false" />
+    </application>
+
+</manifest>

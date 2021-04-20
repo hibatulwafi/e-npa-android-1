@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardPreventCornerOverlap="true"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_op"
+            android:minHeight="100dp"
+            android:padding="10dp">
+
+            <ImageView
+                style="@style/homeCardImage"
+                android:maxHeight="90dp"
+                android:layout_width="90dp"
+                android:src="@drawable/li_objekpajak" />
+
+            <TextView
+                android:id="@+id/tvalamatop"
+                style="@style/viewParent.headerText.homeCardContent"
+                android:layout_below="@id/tvnamaop"
+                android:text="Alamat" />
+
+            <TextView
+                android:id="@+id/tvnamaop"
+                style="@style/viewParent.headerText.HomeCardTitle"
+                android:text="Nama OP" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

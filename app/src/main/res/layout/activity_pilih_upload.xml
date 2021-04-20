@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:gl="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sukabumikota.sipajar.menu.PilihUpload"
+    style="@style/parent.contentLayout">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:text="Pilih Tipe Upload"
+        style="@style/viewParent.headerText" />
+
+    <TextView
+        android:text="Berikut tipe pilihan upload yang tersedia"
+        style="@style/viewParent.headerText.contentText"
+        android:layout_marginBottom="20dp"/>
+
+
+    <!--Example with RelativeLayout and Gradient Drawable -->
+    <!-- for Recycler view use any of the layout as model-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pilihfoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardPreventCornerOverlap="true"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/home_gradient_maths"
+            android:minHeight="100dp"
+            android:padding="10dp">
+
+            <ImageView
+                style="@style/homeCardImage"
+                android:maxHeight="90dp"
+                android:layout_width="90dp"
+                app:srcCompat="@drawable/ic_camera_enhance_black_24dp" />
+
+            <TextView
+                style="@style/viewParent.headerText.homeCardContent"
+                android:layout_below="@id/textViewSub1Title"
+                android:text="Hanya Upload foto saja\nLebih cepat dan efisien" />
+
+            <TextView
+                android:id="@+id/textViewSub1Title"
+                style="@style/viewParent.headerText.HomeCardTitle"
+                android:text="Upload Foto Meteran" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/pilihdetail"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:cardCornerRadius="15dp"-->
+<!--            app:cardPreventCornerOverlap="true"-->
+<!--            android:layout_marginTop="10dp">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@drawable/home_gradient_maths"-->
+<!--                android:minHeight="100dp"-->
+<!--                android:padding="10dp">-->
+
+<!--                <ImageView-->
+<!--                    style="@style/homeCardImage"-->
+<!--                    android:maxHeight="90dp"-->
+<!--                    android:layout_width="90dp"-->
+<!--                    app:srcCompat="@drawable/ic_add_a_photo_black_24dp" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/viewParent.headerText.homeCardContent"-->
+<!--                    android:layout_below="@id/textViewSub1Title2"-->
+<!--                    android:text="Upload foto dan detail\nMempercepat Validasi" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewSub1Title2"-->
+<!--                    style="@style/viewParent.headerText.HomeCardTitle"-->
+<!--                    android:text="Foto + Detail" />-->
+
+<!--            </RelativeLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pilihriwayat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardPreventCornerOverlap="true"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/home_gradient_maths"
+                android:minHeight="100dp"
+                android:padding="10dp">
+
+                <ImageView
+                    style="@style/homeCardImage"
+                    android:maxHeight="90dp"
+                    android:layout_width="90dp"
+                    app:srcCompat="@drawable/ic_check" />
+
+                <TextView
+                    style="@style/viewParent.headerText.homeCardContent"
+                    android:layout_below="@id/textViewSub1Title3"
+                    android:text="Bagaimana Kabar Laporanmu ?\nYuk, bisa cek disini !" />
+
+                <TextView
+                    android:id="@+id/textViewSub1Title3"
+                    style="@style/viewParent.headerText.HomeCardTitle"
+                    android:text="Riwayat" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

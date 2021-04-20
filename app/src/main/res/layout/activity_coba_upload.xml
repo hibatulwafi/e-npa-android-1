@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    style="@style/parent.contentLayout"
+    tools:context=".lappajak.HanyaFoto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Ambil Foto"
+            style="@style/viewParent.headerText" />
+
+        <TextView
+            android:text="Ambil foto penggunaan meteran dan kirimkan kepada admin, klik gambar untuk ambil foto."
+            style="@style/viewParent.headerText.contentText"
+            android:layout_marginBottom="20dp"/>
+
+        <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:id="@+id/main_activity_container"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/li_upload"
+                android:layout_centerHorizontal="true" />
+
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv"
+                android:layout_centerHorizontal="true">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/editMeteran"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/loginViewsMargin">
+                    <EditText
+                        android:id="@+id/editTextMeteran"
+                        style="@style/modifiedEditText"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:hint="Meteran"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/editKeterangan"
+                    android:layout_below="@+id/editMeteran"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/loginViewsMargin">
+                    <EditText
+                        android:id="@+id/editTextKeterangan"
+                        style="@style/modifiedEditText"
+                        android:maxLines="1"
+                        android:hint=" Catatan "/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:id="@+id/tvLatitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="26dp"
+                    android:textIsSelectable="true"
+                    android:textSize="18sp"
+                    tools:text="Result Latitude"/>
+
+                <TextView
+                    android:id="@+id/tvLongitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textIsSelectable="true"
+                    android:textSize="18sp"
+                    android:layout_toRightOf="@+id/tvLatitude"
+                    tools:text="Result Longitude"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp">
+
+
+                <Button
+                    style="@style/loginButton"
+                    android:id="@+id/btnupload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Upload Foto" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardPreventCornerOverlap="true"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_slider_screen2"
+                android:minHeight="100dp"
+                android:padding="10dp">
+
+
+                <TextView
+                    style="@style/viewParent.headerText.homeCardContent"
+                    android:layout_below="@id/catatan"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:text="Pastikan Foto terilihat jelas agar mempermudah status validasi" />
+
+                <TextView
+                    android:id="@+id/catatan"
+                    style="@style/viewParent.headerText.homeCardContent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:text="Catatan" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvtagihan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:background="@color/whiteBodyColor"
+        app:cardPreventCornerOverlap="true"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="100dp"
+            android:padding="10dp">
+
+            <ImageView
+            android:id="@+id/imgtagihan"
+            android:src="@drawable/li_laporan"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:maxWidth="90dp"
+            android:layout_width="wrap_content"
+            />
+
+            <TextView
+                android:id="@+id/tvtanggal"
+                android:textColor="@color/profileEditTextColor"
+                style="@style/viewParent.headerText.homeCardContent"
+                android:layout_below="@id/tvnamaop"
+                android:layout_toRightOf="@+id/imgtagihan"
+                android:text="Juli - 2020" />
+            <TextView
+                android:id="@+id/tvstatus"
+                android:gravity="end"
+                android:textColor="@color/bg_slider_screen1"
+                style="@style/viewParent.headerText.homeCardContent"
+                android:layout_below="@id/tvnamaop"
+                android:layout_toRightOf="@+id/tvtanggal"
+                android:layout_alignParentRight="true"
+                android:text="Lunas"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+            <TextView
+                android:id="@+id/tvnamaop"
+                android:textColor="@color/profileEditTextColor"
+                android:layout_toRightOf="@+id/imgtagihan"
+                android:textSize="20dp"
+                style="@style/viewParent.headerText.HomeCardTitle"
+                android:text="PT Pajak Air Permukaan" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

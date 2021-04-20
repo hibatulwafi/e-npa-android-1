@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sukabumikota.sipajar.objekpajak.OPDetail"
+    android:background="@color/grayColor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="350dp"
+                android:background="@drawable/bg_gradient_bluesea"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_back_img"
+                    android:onClick="onBackClick"
+                    android:adjustViewBounds="false"
+                    tools:ignore="OnClick" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageopdet"
+                    android:paddingEnd="45dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="45dp"
+                    android:src="@drawable/li_dashboard" />
+
+            </LinearLayout>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="275dp"
+                app:cardCornerRadius="5dp"
+                android:elevation="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtnamaop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PT TADIKA MESRA"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorAccent"/>
+                        <TextView
+                            android:id="@+id/txttanggalregis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="17 Jun 2020"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/profileEditTextColor"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_below="@id/cv"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tab_layout"
+        android:background="@color/colorPrimary"
+        app:tabTextColor="@color/profileEditTextColor"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorAccent">
+    </com.google.android.material.tabs.TabLayout>
+
+        </RelativeLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sukabumikota.sipajar.objekpajak.OPFragment"
+    android:orientation="vertical">
+
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvalamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                android:background="@color/whiteBodyColor"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/relative1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="50dp"
+                    android:paddingLeft="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        app:srcCompat="@drawable/ic_titik"
+                        android:tint="@color/colorAccent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:maxWidth="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginRight="@dimen/nav_header_vertical_spacing"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        style="@style/viewParent.headerText.HomeCardTitle"
+                        android:layout_toRightOf="@+id/img1"
+                        android:paddingTop="@dimen/activity_horizontal_margin"
+                        android:text="Alamat Titik Sumur"
+                        android:textColor="@color/profileEditTextColor"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtopalamat"
+                        android:textColor="@color/profileEditTextColor"
+                        style="@style/viewParent.headerText.homeCardContent"
+                        android:layout_below="@id/tv1"
+                        android:textSize="15sp"
+                        android:layout_toRightOf="@+id/img1"
+                        android:text="Jl Bhayangkara Gg Karya 1" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvlong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                android:background="@color/whiteBodyColor"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/relative5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="70dp"
+                    android:paddingLeft="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img5"
+                        app:srcCompat="@drawable/ic_pin_drop"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:maxWidth="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginRight="@dimen/nav_header_vertical_spacing"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv5"
+                        style="@style/viewParent.headerText.HomeCardTitle"
+                        android:layout_toRightOf="@+id/img5"
+                        android:paddingTop="@dimen/activity_horizontal_margin"
+                        android:text="Longitude"
+                        android:textColor="@color/profileEditTextColor"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtlong"
+                        android:textColor="@color/profileEditTextColor"
+                        style="@style/viewParent.headerText.homeCardContent"
+                        android:layout_below="@id/tv5"
+                        android:textSize="15sp"
+                        android:layout_toRightOf="@+id/img5"
+                        android:text="12321313" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvlat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                android:background="@color/whiteBodyColor"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/relative6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="70dp"
+                    android:paddingLeft="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img6"
+                        app:srcCompat="@drawable/ic_pin_drop"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:maxWidth="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginRight="@dimen/nav_header_vertical_spacing"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv6"
+                        style="@style/viewParent.headerText.HomeCardTitle"
+                        android:layout_toRightOf="@+id/img6"
+                        android:paddingTop="@dimen/activity_horizontal_margin"
+                        android:text="Latitude"
+                        android:textColor="@color/profileEditTextColor"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtlat"
+                        android:textColor="@color/profileEditTextColor"
+                        style="@style/viewParent.headerText.homeCardContent"
+                        android:layout_below="@id/tv6"
+                        android:textSize="15sp"
+                        android:layout_toRightOf="@+id/img6"
+                        android:text="-67565" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvnoipat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                android:background="@color/whiteBodyColor"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/relative2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="70dp"
+                    android:paddingLeft="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        app:srcCompat="@drawable/ic_number"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:maxWidth="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginRight="@dimen/nav_header_vertical_spacing"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        style="@style/viewParent.headerText.HomeCardTitle"
+                        android:layout_toRightOf="@+id/img2"
+                        android:paddingTop="@dimen/activity_horizontal_margin"
+                        android:text="No Ipat"
+                        android:textColor="@color/profileEditTextColor"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtnoipat"
+                        android:textColor="@color/profileEditTextColor"
+                        style="@style/viewParent.headerText.homeCardContent"
+                        android:layout_below="@id/tv2"
+                        android:textSize="15sp"
+                        android:layout_toRightOf="@+id/img2"
+                        android:text="111.1111" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvwp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                android:background="@color/whiteBodyColor"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/relative3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="70dp"
+                    android:paddingLeft="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img3"
+                        app:srcCompat="@drawable/ic_nama_ico"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:maxWidth="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginRight="@dimen/nav_header_vertical_spacing"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:textColor="@color/profileEditTextColor"
+                        android:layout_toRightOf="@+id/img3"
+                        android:textSize="15sp"
+                        android:paddingTop="@dimen/activity_horizontal_margin"
+                        style="@style/viewParent.headerText.HomeCardTitle"
+                        android:text="Wajib Pajak" />
+
+                    <TextView
+                        android:id="@+id/txtnamawp"
+                        android:textColor="@color/profileEditTextColor"
+                        style="@style/viewParent.headerText.homeCardContent"
+                        android:layout_below="@id/tv3"
+                        android:textSize="15sp"
+                        android:layout_toRightOf="@+id/img3"
+                        android:text="Samirah Rahayu" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvjt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                android:background="@color/whiteBodyColor"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/relative7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="70dp"
+                    android:paddingLeft="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img7"
+                        android:tint="@color/colorAccent"
+                        app:srcCompat="@drawable/ic_calendar"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:maxWidth="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginRight="@dimen/nav_header_vertical_spacing"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv7"
+                        android:textColor="@color/profileEditTextColor"
+                        android:layout_toRightOf="@+id/img7"
+                        android:textSize="15sp"
+                        android:paddingTop="@dimen/activity_horizontal_margin"
+                        style="@style/viewParent.headerText.HomeCardTitle"
+                        android:text="Tanggal Wajib Lapor" />
+
+                    <TextView
+                        android:id="@+id/tctjatuh"
+                        android:textColor="@color/profileEditTextColor"
+                        style="@style/viewParent.headerText.homeCardContent"
+                        android:layout_below="@id/tv7"
+                        android:textSize="15sp"
+                        android:layout_toRightOf="@+id/img7"
+                        android:text="10" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

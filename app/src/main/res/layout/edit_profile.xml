@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sukabumikota.sipajar.menu.GantiProfile"
+    tools:showIn="@layout/activity_ganti_profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <RelativeLayout style="@style/profileDetailsLayout">
+            <ImageView
+                android:id="@+id/image1"
+                app:srcCompat="@drawable/ic_email_ico"
+                style="@style/profileEditImage"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/parent"
+                android:layout_toRightOf="@id/image1">
+                <EditText
+                    android:longClickable="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:id="@+id/txtemail"
+                    style="@style/modifiedEditText"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:hint="@string/login_email_hint"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/profileDetailsLayout">
+            <ImageView
+                android:id="@+id/image2"
+                app:srcCompat="@drawable/ic_nama_ico"
+                style="@style/profileEditImage"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/parent"
+                android:layout_toRightOf="@id/image2">
+                <EditText
+                    android:id="@+id/txtnama"
+                    style="@style/modifiedEditText"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:hint="Nama"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/profileDetailsLayout">
+            <ImageView
+                android:id="@+id/image3"
+                app:srcCompat="@drawable/ic_vpn_key"
+                style="@style/profileEditImage"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/parent"
+                android:layout_toRightOf="@id/image3">
+                <EditText
+                    android:id="@+id/txtpasswordlama"
+                    style="@style/modifiedEditText"
+                    android:hint="Password Lama"
+                    android:maxLines="1"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout style="@style/profileDetailsLayout">
+            <ImageView
+                android:id="@+id/image4"
+                app:srcCompat="@drawable/ic_vpn_key"
+                style="@style/profileEditImage"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/parent"
+                android:layout_toRightOf="@id/image4">
+                <EditText
+                    android:id="@+id/txtpasswordbaru"
+                    style="@style/modifiedEditText"
+                    android:hint="Password Baru"
+                    android:maxLines="1"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/profileDetailsLayout">
+            <ImageView
+                android:id="@+id/image5"
+                app:srcCompat="@drawable/ic_vpn_key"
+                style="@style/profileEditImage"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPassword"
+                style="@style/parent"
+                android:layout_toRightOf="@id/image5">
+
+                <EditText
+                    android:id="@+id/txtrepasswordbaru"
+                    style="@style/modifiedEditText"
+                    android:hint="Input Ulang Password"
+                    android:maxLines="1"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/profileDetailsLayout">
+            <ImageView
+                android:id="@+id/image6"
+                app:srcCompat="@drawable/ic_pin_drop"
+                style="@style/profileEditImage"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/parent"
+                android:layout_toRightOf="@id/image6">
+                <EditText
+                    android:id="@+id/txtalamat"
+                    style="@style/modifiedEditText"
+                    android:inputType="text"
+                    android:maxLines="3"
+                    android:hint="Alamat"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/edit"
+            android:onClick="edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Edit"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/whiteTextColor"
+            android:layout_marginBottom="@dimen/contentTextSize"
+            android:background="@drawable/onboarding_button"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    style="@style/parent.contentLayout"
+    tools:context="com.sukabumikota.sipajar.menu.PilihOp">
+
+    <TextView
+        android:text="Pilih Titik Sumur Yang Akan Dilaporkan"
+        style="@style/viewParent.headerText" />
+
+    <TextView
+        android:text="Berikut Adalah Titik Sumur yang anda kelola"
+        style="@style/viewParent.headerText.contentText"
+        android:layout_marginBottom="20dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvtempatolahraga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        tools:listitem="@layout/activity_rvobjekpajak"
+        android:paddingTop="16dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

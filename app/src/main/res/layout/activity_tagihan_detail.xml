@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sukabumikota.sipajar.tagihan.TagihanDetail">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorAccent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleTextAppearance="@style/TransparentText">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout"
+                android:background="@drawable/profile_bk">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/li_laporan"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TAGIHAN"
+                    android:textSize="28dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/notagihan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Tagihan"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                style="@style/headerText"
+                android:text="Informasi Tagihan"
+                android:layout_marginBottom="10dp"/>
+
+            <RelativeLayout style="@style/profileDetailsLayout">
+                <ImageView
+                    android:background="@color/colorAccent"
+                    android:id="@+id/nameImageView"
+                    app:srcCompat="@drawable/ic_store_black_24dp"
+                    style="@style/profileDetailsImage" />
+
+                <TextView
+                    android:id="@+id/nameTextView"
+                    android:text="Objek Pajak"
+                    android:layout_toRightOf="@id/nameImageView"
+                    style="@style/profileDetailsTextMain" />
+
+                <TextView
+                    android:id="@+id/txtopnama"
+                    android:text="PT PDAM - "
+                    android:layout_toRightOf="@id/nameImageView"
+                    style="@style/profileDetailsMiniText" />
+                <TextView
+                    android:id="@+id/txtalamat"
+                    android:text="Jl Bhayangkara"
+                    android:layout_toRightOf="@id/txtopnama"
+                    style="@style/profileDetailsMiniText" />
+
+            </RelativeLayout>
+
+            <View style="@style/proifleDetailsView" />
+            <RelativeLayout style="@style/profileDetailsLayout">
+                <ImageView
+                    android:background="@color/colorAccent"
+                    android:id="@+id/mobileImageView"
+                    app:srcCompat="@drawable/ic_meter"
+                    style="@style/profileDetailsImage" />
+
+                <TextView
+                    android:text="Total Penggunaan"
+                    android:layout_toRightOf="@id/mobileImageView"
+                    style="@style/profileDetailsTextMain"/>
+
+                <TextView
+                    android:id="@+id/txtpenggunaan"
+                    android:text="4.539 M3"
+                    android:layout_toRightOf="@id/mobileImageView"
+                    style="@style/profileDetailsMiniText" />
+
+            </RelativeLayout>
+
+            <View style="@style/proifleDetailsView" />
+            <RelativeLayout style="@style/profileDetailsLayout">
+                <ImageView
+                    android:background="@color/colorAccent"
+                    android:id="@+id/emailImageView"
+                    app:srcCompat="@drawable/ic_attach_money_black_24dp"
+                    style="@style/profileDetailsImage" />
+
+                <TextView
+                    android:text="Nilai Perolehan Air (NPA)"
+                    android:layout_toRightOf="@id/emailImageView"
+                    style="@style/profileDetailsTextMain" />
+
+                <TextView
+                    android:id="@+id/txttarif"
+                    android:text="Rp. 3.500 / M3"
+                    android:layout_toRightOf="@id/emailImageView"
+                    style="@style/profileDetailsMiniText" />
+
+            </RelativeLayout>
+
+            <View style="@style/proifleDetailsView" />
+            <RelativeLayout style="@style/profileDetailsLayout">
+                <ImageView
+                    android:background="@color/colorAccent"
+                    android:id="@+id/addressImageView"
+                    app:srcCompat="@drawable/ic_calendar"
+                    style="@style/profileDetailsImage" />
+
+                <TextView
+                    style="@style/profileDetailsTextMain"
+                    android:layout_toRightOf="@id/addressImageView"
+                    android:text="Bulan" />
+
+                <TextView
+                    android:id="@+id/txttanggal"
+                    android:text="Juli 2020"
+                    android:layout_toRightOf="@id/addressImageView"
+                    style="@style/profileDetailsMiniText" />
+
+            </RelativeLayout>
+
+            <View style="@style/proifleDetailsView" />
+            <RelativeLayout style="@style/profileDetailsLayout">
+                <ImageView
+                    android:background="@color/colorAccent"
+                    android:id="@+id/dendaimageview"
+                    app:srcCompat="@drawable/ic_attach_money_black_24dp"
+                    style="@style/profileDetailsImage" />
+
+                <TextView
+                    android:text="Denda"
+                    android:layout_toRightOf="@id/dendaimageview"
+                    style="@style/profileDetailsTextMain" />
+
+                <TextView
+                    android:id="@+id/txtdenda"
+                    android:text="Rp 0"
+                    android:layout_toRightOf="@id/dendaimageview"
+                    style="@style/profileDetailsMiniText" />
+
+            </RelativeLayout>
+            <View style="@style/proifleDetailsView" />
+            <RelativeLayout style="@style/profileDetailsLayout">
+                <ImageView
+                    android:background="@color/colorAccent"
+                    android:id="@+id/dobImageView"
+                    app:srcCompat="@drawable/ic_check"
+                    style="@style/profileDetailsImage" />
+
+                <TextView
+                    android:text="Status"
+                    android:layout_toRightOf="@id/dobImageView"
+                    style="@style/profileDetailsTextMain" />
+
+                <TextView
+                    android:id="@+id/txtstatus"
+                    android:text="Sukses - Lunas"
+                    android:layout_toRightOf="@id/dobImageView"
+                    style="@style/profileDetailsMiniText" />
+
+            </RelativeLayout>
+            <View style="@style/proifleDetailsView" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_slider_screen2"
+                    android:minHeight="100dp"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:id="@+id/txttotaltagihan"
+                        android:gravity="center"
+                        android:textSize="28dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        style="@style/viewParent.headerText.homeCardContent"
+                        android:layout_below="@id/totag"
+                        android:text="Rp 1.000.000,-" />
+
+                    <TextView
+                        android:id="@+id/totag"
+                        style="@style/viewParent.headerText.homeCardContent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:text="Total Tagihan" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_back_img"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="onBackClick"
+        android:adjustViewBounds="false"
+        tools:ignore="OnClick" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

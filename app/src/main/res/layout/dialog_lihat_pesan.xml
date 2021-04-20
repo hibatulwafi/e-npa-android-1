@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/whiteBodyColor"
+            android:minHeight="100dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/gambar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/li_pesankeluar"/>
+
+            <TextView
+                android:id="@+id/balas"
+                android:layout_below="@+id/gambar"
+                style="@style/viewParent.headerText.homeCardContent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:text="Detail Pesan"
+                android:textColor="@color/profileEditTextColor"
+                />
+
+
+
+            <TextView
+                android:id="@+id/txtsubjek"
+                style="@style/viewParent.headerText.homeCardContent"
+                android:layout_below="@id/balas"
+                android:textColor="@color/profileEditTextColor"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:text="Subjek" />
+
+            <TextView
+                android:id="@+id/txtpesan"
+                style="@style/viewParent.headerText.homeCardContent"
+                android:layout_below="@id/txtsubjek"
+                android:textColor="@color/profileEditTextColor"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:text="Lorem Ipsum Dolor sit amet, Lorem Ipsum Dolor sit amet, Lorem Ipsum Dolor sit amet" />
+
+
+            <Button
+                android:layout_below="@+id/txtpesan"
+                android:background="@drawable/button_close"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/btnkirim"
+                android:textColor="@color/whiteTextColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tutup" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
